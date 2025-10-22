@@ -1,4 +1,4 @@
-YouTrack-Telegram Integration
+YouTrack Messenger Program
 =================================
 The program fetches notifications periodically from YouTrack and uses a connection with a Telegram bot to represent those notifications as real time text messages
     
