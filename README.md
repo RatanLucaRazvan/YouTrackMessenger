@@ -16,11 +16,11 @@ To build and run this project, the followings are needed:
 Configuration
 ----------------
 
-Before running the application, you must provide six credentials. All configuration is done in the src/main/java/com/jetbrains/intern/Main.java file.
+Before running the application, you must provide six credentials. For security purposes, each of the values for the credentials was provided through the systems environment variables.
 
 ### Finding Your Credentials:
 
-1.  **YOUTRACK\_URL**: The full URL of your YouTrack instance (e.g., https://my-team.youtrack.cloud).
+1.  **YOUTRACK\_URL**: The full URL of your YouTrack instance.
     
 2.  **YOUTRACK\_TOKEN**:
     
@@ -56,7 +56,7 @@ Before running the application, you must provide six credentials. All configurat
 How to Run
 -------------
 
-1.  Close the repository
+1.  Clone the repository
     
 2.  Open the project in IntelliJ
 
