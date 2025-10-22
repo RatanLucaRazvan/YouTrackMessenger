@@ -57,9 +57,7 @@ public class YouTrackCreationService {
 
         if (response.statusCode() == 200) {
             System.out.println("Found the following projects:");
-            // Parse the JSON array into a List of ProjectInfo objects
             List<ProjectInfo> projects = gson.fromJson(response.body(), new TypeToken<List<ProjectInfo>>() {}.getType());
-            // Loop through and print a formatted table
             for (ProjectInfo project : projects) {
                 System.out.format("  - Project Name: %-20s | shortName: %-10s | INTERNAL ID: %s\n",
                         project.name(), project.shortName(), project.id());

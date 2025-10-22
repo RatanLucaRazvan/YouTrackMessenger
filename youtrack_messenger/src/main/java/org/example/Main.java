@@ -3,8 +3,6 @@ package org.example;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
         final String YOUTRACK_URL = System.getenv("YOUTRACK_URL");
@@ -19,7 +17,7 @@ public class Main {
             System.err.println("Error: One or more required environment variables are not set.");
             System.err.println("Please set YOUTRACK_URL, YOUTRACK_TOKEN, YOUTRACK_PROJECT_ID, " +
                     "BOT_TOKEN, BOT_USERNAME, and TARGET_CHAT_ID.");
-            return; // Exit if configuration is missing
+            return;
         }
 
         try{
