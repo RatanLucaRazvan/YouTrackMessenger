@@ -7,12 +7,20 @@ import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        final String YOUTRACK_URL = "https://lucaratan.youtrack.cloud";
-        final String YOUTRACK_TOKEN = "perm-YWRtaW4=.NDQtMA==.YFWfoXaGs1LaEPTTBouzi4Gw1xKGYZ";
-        final String YOUTRACK_PROJECT_ID = "0-0";
-        final String BOT_TOKEN = "8324600435:AAGONo0JhTJA1ZP3GKC0PrOzhmTbkt5XsXs";
-        final String BOT_USERNAME = "lucaratan_bot";
-        final String TARGET_CHAT_ID = "8308599765";
+        final String YOUTRACK_URL = System.getenv("YOUTRACK_URL");
+        final String YOUTRACK_TOKEN = System.getenv("YOUTRACK_TOKEN");
+        final String YOUTRACK_PROJECT_ID = System.getenv("YOUTRACK_PROJECT_ID");
+        final String BOT_TOKEN = System.getenv("BOT_TOKEN");
+        final String BOT_USERNAME = System.getenv("BOT_USERNAME");
+        final String TARGET_CHAT_ID = System.getenv("TARGET_CHAT_ID");
+
+        if (YOUTRACK_URL == null || YOUTRACK_TOKEN == null || YOUTRACK_PROJECT_ID == null ||
+                BOT_TOKEN == null || BOT_USERNAME == null || TARGET_CHAT_ID == null) {
+            System.err.println("Error: One or more required environment variables are not set.");
+            System.err.println("Please set YOUTRACK_URL, YOUTRACK_TOKEN, YOUTRACK_PROJECT_ID, " +
+                    "BOT_TOKEN, BOT_USERNAME, and TARGET_CHAT_ID.");
+            return; // Exit if configuration is missing
+        }
 
         try{
             YouTrackCreationService creationService = new YouTrackCreationService(YOUTRACK_URL, YOUTRACK_TOKEN);

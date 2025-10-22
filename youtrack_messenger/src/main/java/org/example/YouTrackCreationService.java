@@ -46,7 +46,7 @@ public class YouTrackCreationService {
 
     public void listProjectsAndFindId() throws Exception {
         System.out.println("--- Finding Project IDs ---");
-        String fields = "id,name,shortName"; // Ask the API for these specific fields for each project
+        String fields = "id,name,shortName";
         String url = String.format("%s/api/admin/projects?fields=%s", youtrackUrl, fields);
 
         HttpRequest request = HttpRequest.newBuilder().uri(URI.create(url))
