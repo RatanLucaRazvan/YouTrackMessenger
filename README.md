@@ -1,6 +1,6 @@
 YouTrack Messenger Program
 =================================
-The program fetches notifications periodically from YouTrack and uses a connection with a Telegram bot to represent those notifications as real time text messages
+The program fetches notifications periodically from YouTrack and uses a connection with a Telegram bot to represent those notifications as real time text messages. In addition, issues can also be created by sending a command to the Telegram bot
     
 
 Prerequisites
@@ -10,7 +10,7 @@ To build and run this project, the followings are needed:
 
 *   **Java Development Kit (JDK):** Version 11 or newer.
     
-*   **Apache Maven:** To manage dependencies and build the project.
+*   **Maven:** To manage dependencies and build the project.
     
 
 Configuration
@@ -57,10 +57,12 @@ How to Run
 -------------
 
 1.  Clone the repository
-    
-2.  Open the project in IntelliJ
 
-3. Build and Run the project  
+2. Set the environment variables  
+    
+3.  Open the project in IntelliJ
+
+4. Build and Run the project  
     
 
 Usage
@@ -68,7 +70,7 @@ Usage
 
 ### Receiving Notifications
 
-Once the application is running, simply perform actions in your YouTrack project (create issues, change their state, add comments). Within 30 seconds, a formatted notification will automatically appear in the Telegram chat specified by TARGET\_CHAT\_ID.
+Once the application is running, simply perform actions YouTrack project on the existent issues (e.g. change their state). Within 30 seconds, a formatted notification will automatically appear in the Telegram chat specified by TARGET\_CHAT\_ID.
 
 ### Creating an Issue
 
