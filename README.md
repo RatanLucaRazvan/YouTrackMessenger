@@ -57,10 +57,12 @@ How to Run
 -------------
 
 1.  Clone the repository
-    
-2.  Open the project in IntelliJ
 
-3. Build and Run the project  
+2. Set the environment variables  
+    
+3.  Open the project in IntelliJ
+
+4. Build and Run the project  
     
 
 Usage
